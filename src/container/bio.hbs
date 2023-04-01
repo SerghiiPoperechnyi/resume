@@ -1,0 +1,91 @@
+<div>
+  <main>
+    <h1>{{name}}</h1>
+    <div>Birth:
+      <time>{{birthdate}}</time>
+      <address>{{birthplace}}</address>Death: <time>{{deathdate}}</time>
+      <address>{{deathplace}}
+      </address>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>Nationality: {{nationality}}</div>
+    <div>Occupation: {{occupation}}</div>
+    <div>Known for:
+      <ul>
+        {{#each known_for}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>Education:
+      {{#each education}}
+      {{degree}}, {{field}}, {{institution}}, {{year}}
+      {{/each}}
+    </div>
+    <br>
+    <div>Notable publications:
+      <ul>
+        {{#each notable_publications}}
+        <li>{{title}}, {{year}}, {{publisher}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>Partners:
+      <ul>
+        {{#each partners}}
+        <li>{{name}}, {{relationship}}, {{years}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>Awards:
+      {{#each awards}}
+      {{title}}, {{year}}, {{description}}
+      {{/each}}
+    </div>
+    <div>Influences:
+      <ul>
+        {{#each influences}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>Influenced:
+      <ul>
+        {{#each influenced}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>Quotes:
+      <ul>
+        {{#each quotes}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div>Major discoveries:
+      <section>
+        {{#each major_discoveries}}
+        <div>Title: {{title}}</div>
+        <div>Year: {{year}} </div>
+        <div>Description: {{description}}</div>
+        {{/each}}
+      </section>
+    </div>
+
+    <div>Contributions:
+      <section>
+        {{#with contributions}}
+        <div>Title: {{title}}</div>
+        <div>Year: {{year}} </div>
+        <div>Field: {{field}} </div>
+        <div>Description: {{description}}</div>
+        {{/with}}
+      </section>
+    </div>
+
+  </main>
+</div>
