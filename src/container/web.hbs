@@ -1,0 +1,71 @@
+<main>
+  <div>
+    {{#with web}}
+      <ul>
+        {{#with languages}}
+          <li>{{[0].name}}</li>
+          <li>{{[0].version}}</li>
+          <li>{{[0].description}}</li>
+          <li>Elements:
+            <ul>
+              {{#each [0].elements}}
+                <li>
+                  {{name}} - {{description}}
+                  <ul> 
+                    {{#each attributes}}
+                    <li>{{name}} - {{description}}</li>
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>  
+          </li>
+          <br>
+          <hr>
+          <br>
+          <li>{{[1].name}}</li>
+          <li>{{[1].version}}</li>
+          <li>{{[1].description}}</li>
+          <li>Properties:
+            <ul>
+              {{#each [1].properties}}
+                <li>
+                  {{name}} - {{description}}
+                  <ul> 
+                    {{#each values}}
+                    <li>{{value}} - {{description}}</li>
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>  
+          </li> 
+            <br>  
+            <br>
+          <hr>
+          <br>
+          <li>{{[2].name}}</li>
+          <li>{{[2].version}}</li>
+          <li>{{[2].description}}</li>
+          <li>Functions:
+            <ul>
+              {{#each [2].functions}}
+                <li>
+                  {{name}} - {{description}}
+                  <ul> 
+                    {{#each parameters}}
+                    <li>{{name}} - {{type}} - {{description}}</li>
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>  
+          </li> 
+            <br>  
+        {{/with}}
+      </ul>
+    {{/with}}
+</div>
+</main>
+{{!-- {{#if properties}} {{properties}}{{/if}}
+          {{#if functions}} {{functions}} {{/if}} --}}
