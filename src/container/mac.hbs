@@ -1,0 +1,140 @@
+<div>
+  <main>
+    <h2>{{name}}<span class="badge bg-secondary">{{price}}</span></h2>
+    <p>{{description}}</p>
+    <p><h3>{{category}}</h3></p>
+    <hr>
+    <div>
+      {{#with features}}
+        <div class="row">
+          <div class="col-6">
+            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1">Features:</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item-1-1">Processor:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-2">Memory:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-3">Storage:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-4">Display:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-5">Graphics:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-6">Ports:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-7">Battery:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-8">Weight:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-9">Demensions:</a>
+                  <a class="nav-link ms-3 my-1" href="#item-1-10">OS:</a>                  
+                </nav>
+                <a class="nav-link" href="#item-2">Accessories:</a>
+                </nav>
+              </nav>
+            </nav>
+          </div>
+          <div class="col-4">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+              <div id="item-1-1">
+                <h5>Processor:</h5>
+                {{#with processor}}
+                <div>brand: {{brand}}</div>
+                <div>model: {{model}}</div>
+                <div>speed: {{speed}}</div>      
+                <div>cores: {{cores}}</div>
+                <div>cashe: {{cache}}</div>
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-2">
+                <h5>Memory:</h5>
+                {{#with memory}}
+                <div>type: {{type}}</div>
+                <div>size: {{size}}</div>
+                <div>speed: {{spedd}}</div>
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-3">
+              <h5>Storage:</h5>
+                {{#with storage}}
+                <div>type: {{type}}</div>
+                <div>size: {{size}}</div>
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-4">
+              <h5>Display:</h5>
+                {{#with display}}
+                <div>size: {{size}}</div>
+                <div>resolution: {{resolution}}</div>
+                <div>technology: {{technology}}</div>
+                <div>color_space: {{color_space}}</div>     
+                <div>brightness: {{brightness}}</div>
+                <div>refresh_rate: {{refresh_rate}}</div>
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-5">
+              <h5>Graphics:</h5>
+                {{#with graphics}}
+                <div>brand: {{brand}}</div>
+                <div>model: {{model}}</div>
+                <div>memory: {{memory}}</div> 
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-6">
+              <h5>Ports:</h5>
+                {{#with ports}}
+                  <div>type: {{[0].type}}</div>
+                  <div>count: {{[0].count}}</div>
+                  <div>features:
+                    {{#each [0].features}}
+                      {{this}}
+                    {{/each}}
+                  </div> 
+                  <br>
+                  <div>type: {{[1].type}}</div>
+                  <div>count: {{[1].count}}</div>
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-7">
+              <h5>Battery:</h5>
+                {{#with battery}}
+                <div>type: {{type}}</div>
+                <div>capacity: {{capacity}}</div>
+                <div>life: {{life}}</div> 
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-8">
+              <h5>Weight:</h5>
+                <div>weight: {{weight}}</div>
+              </div>
+              <br>
+              <div id="item-1-9">
+              <h5>Dimensions:</h5>
+                {{#with dimensions}}
+                <div>height: {{height}}</div>
+                <div>width: {{width}}</div>
+                <div>depth: {{depth}}</div> 
+                {{/with}}
+              </div>
+              <br>
+              <div id="item-1-10">
+              <h5>OS:</h5>
+                <div>OS: {{operating_system}}</div>
+              </div>
+              <br>
+              <div id="item-2">
+              <h4>Accessories:</h4>
+              <div>
+                {{#each accessories}}
+                  <div>{{name}},{{price}}</div>
+                {{/each}}
+              </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      {{/with}}     
+    </div>  
+  </main>
+</div>
