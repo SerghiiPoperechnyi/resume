@@ -1,0 +1,130 @@
+<div>
+  <main>
+    <h1>{{name}}</h1>
+    <br>
+    <div>{{description}}</div>
+    {{#with history}}
+    <time>{{year}}, {{founder}}</time>
+    {{/with}}
+    <hr>
+    <div>
+      <span class="badge text-bg-primary">Types:</span>
+      <section>
+        <ul>
+          {{#each types}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </div>
+    <div>
+      <span class="badge text-bg-secondary">Syntax:</span>
+      <section>
+        <ul>
+          {{#with syntax}}
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                variables
+              </button>
+              <ul class="dropdown-menu">
+                {{#each variables}}
+                  <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          <br>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                functions
+              </button>
+              <ul class="dropdown-menu">
+                {{#each functions}}
+                  <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          <br>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                conditionals
+              </button>
+              <ul class="dropdown-menu">
+                {{#each conditionals}}
+                  <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          <br>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                loops
+              </button>
+              <ul class="dropdown-menu">
+                {{#each loops}}
+                  <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          <br>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                classes
+              </button>
+              <ul class="dropdown-menu">
+                {{#each classes}}
+                  <li><a class="dropdown-item" href="#">{{this}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+          {{/with}}
+        </ul>
+      </section>
+    </div>
+    <div>
+      <span class="badge text-bg-success">Features:</span>
+      <section>
+        <ul>
+          {{#each features}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </div>
+    <div>
+      <span class="badge text-bg-danger">Libraries:</span>
+      <section>
+        <ul>
+          {{#each libraries}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </div>
+    <div>
+      <span class="badge text-bg-warning">Tools:</span>
+      <section>
+        <ul>
+          {{#each tools}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </section>
+    </div>
+    
+  </main>
+</div>
