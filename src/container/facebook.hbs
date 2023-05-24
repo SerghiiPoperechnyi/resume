@@ -1,0 +1,81 @@
+<div>
+  <main>
+    <h2>{{name}}</h2>
+    <br>
+    <strong>Users:</strong>
+    <div>
+      <br>
+      <ul>    
+        {{#each users}}
+          <li>  
+            {{> face }}
+            <br>
+            <strong>Friends:</strong>
+            <ul>
+              {{#each friends}}
+                <li>
+                  {{> face }}
+                    <ul><strong> Mutual friends:</strong>
+                    {{#each mutual_friends}}
+                      <li>{{> face}}
+                        {{#if mutual_friends}}
+                              <ul><strong> Mutual friends:</strong>
+                          {{#each mutual_friends}}
+                            <li>{{> face}}</li>
+                          {{/each}}
+                          </ul>
+                        {{/if}}  
+                      </li>
+                    {{/each}}
+                    </ul>
+                </li>
+                {{#if groups}}
+                <li>
+                  <strong>Groups:</strong>
+                    <ul>
+                      {{#each groups}}
+                        <li>
+                          <div>id: {{id}}</div>
+                          <div>name: {{name}}</div>
+                          <div>description: {{description}}</div>  
+                          <div>members:
+                            <ul>
+                            {{#each members}}
+                              <li>{{> face}}</li>
+                            {{/each}}
+                            </ul>
+                          </div>
+                        </li>  
+                      {{/each}}
+                    </ul>
+                </li> 
+                {{/if}}
+              {{/each}}
+            </ul>
+          </li>
+          {{#if groups}}
+          <li>
+            <strong>Groups:</strong>
+            <ul>
+              {{#each groups}}
+                <li>
+                  <div>id: {{id}}</div>
+                  <div>name: {{name}}</div>
+                  <div>description: {{description}}</div>  
+                  <div>members:
+                    <ul>
+                    {{#each members}}
+                      <li>{{> face}}</li>
+                    {{/each}}
+                    </ul>
+                  </div>
+                </li>  
+              {{/each}}
+            </ul>
+          </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</div>
