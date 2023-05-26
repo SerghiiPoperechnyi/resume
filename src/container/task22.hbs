@@ -1,0 +1,51 @@
+<main>
+    {{#with page_header}}
+        <h1 class="text-center">{{title}}</h1>
+        <p class="text-uppercase text-center">{{description}}</p>
+    {{/with}}  
+    {{#with section}} 
+        {{#with about_us}}
+            <p class="display-6 text-end">{{title_list.main}}</p>
+            <h2 class="text-end">{{title_list.sub}}</h2>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-outline-info">{{button.text}}</button>
+        {{/with}}
+        <br>
+        <br>
+        <br>
+        {{#with advantage}}
+            <p class="display-5 text-capitalize">{{title}}</p>
+            {{#with efficiency}}
+                <p class="display-4">{{title}}</p>
+                <h6 class="text-capitalize">{{sub_title}}</h6>
+                <p>{{description}}</p>
+                <button class="btn btn-outline-warning">{{button}}</button>
+            {{/with}}
+            {{#with innovation}}
+                <p class="display-4 text-center">{{title}}</p>
+                <h6 class="text-capitalize text-center">{{sub_title}}</h6>
+                <p class="text-center">{{description}}</p>
+                <button class="btn btn-outline-warning ">{{button}}</button>
+            {{/with}}
+            {{#with collaboration}}
+                <p class="display-4 text-end">{{title}}</p>
+                <h6 class="text-capitalize text-end">{{sub_title}}</h6>
+                <p class="text-end">{{description}}</p>
+                <button class="btn btn-outline-warning">{{button}}</button>
+            {{/with}}
+            <br>
+            <br>
+            <br>
+        {{/with}}
+        {{#with agreement}}
+                <p class="display-5">{{title}}</p>
+                {{#with info}}
+                    <h5>{{sub_title}}</h5>
+                    <p>{{detail.text}}</p>
+                    <button class="btn btn-success">{{detail.button}}</button>
+                {{/with}}
+            {{/with}}
+    {{/with}} 
+</main>
