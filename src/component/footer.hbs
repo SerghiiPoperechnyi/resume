@@ -1,21 +1,18 @@
 {{#with footer}}
 <footer>
-
-    <br>
+    <hr class="my-5">
     {{#with social}}
     {{> link text=email.text href=email.href blank=true}}
     {{> link text=phone.text href=phone.href blank=true}}
     {{> link text=linkedin.text href=linkedin.href blank=true noLine=true}}
     {{/with}}
-    <br>
-    <div>
+    <div class="my-3">
         <em>Copyright by
             {{#with ../header.name}}
             {{firstname}} {{lastname}}
             {{/with}}
         </em>
     </div>
-    <br>
     <div>
         <em>
             <address>
@@ -23,6 +20,5 @@
             </address>
         </em>
     </div>
-    <br>
 </footer>
 {{/with}}

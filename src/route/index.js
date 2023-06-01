@@ -142,7 +142,9 @@ router.get('/skills', function (req, res) {
     footer,
   })
 })
+
 // ================================================================
+
 router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
@@ -172,6 +174,7 @@ router.get('/education', function (req, res) {
 })
 
 // ================================================================
+
 router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
@@ -649,10 +652,6 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
-
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -733,6 +732,7 @@ router.get('/js', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+// ================================================================
 
 router.get('/mac', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -820,8 +820,6 @@ router.get('/mac', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
 
 // ================================================================
 
@@ -982,6 +980,10 @@ router.get('/facebook', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+//==========================================================
+
+router.get('/car', function (req, res) {
+  // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
@@ -1233,8 +1235,6 @@ router.get('/task22', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
 
 // ================================================================
 
