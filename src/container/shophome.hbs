@@ -1,30 +1,8 @@
 <main>
   <div>
-    <div>
-      {{#with newsBlock}}
-        <h1 class="text-center my-5">{{title}}</h1>
-        <div class="col-12">
-          <div class="row g-2">
-            {{#each cards}}
-              <div class="col-3">
-                <div class="card text-bg-dark">    
-                  <div class="card-header">
-                    {{title}}
-                    {{#if isNew}}
-                      <div class="badge bg-success rounded-pill text-capitalize p-1.5 m-1">нова</div>
-                    {{/if}}
-                    {{#if isTop}}
-                      <div class="badge bg-danger rounded-pill text-capitalize p-1.5 m-1">топ</div>
-                    {{/if}}
-                  </div>
-                  <div class="card-body">{{description}}</div>
-                </div>
-              </div>
-            {{/each}}
-          </div>
-        </div>
-      {{/with}}
-    </div>
+    {{#with newsBlock}}
+      {{>shoppost}}
+    {{/with}}
   </div>
   <hr class="my-5">
   <div>

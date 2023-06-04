@@ -1,0 +1,36 @@
+<main>
+  {{>breadcrumb}}
+  {{#with newsData}}
+    <div class="col-12">
+      <div class="card">
+        <img src="{{photo}}" alt="photo">
+      </div>
+      <div>
+        {{#with head}}
+          <h1 class="my-5">{{heading}}</h1>
+          <p>{{description}}</p>
+        {{/with}}
+      </div>
+      <div>
+        {{#each body}}
+          {{#each this}}
+            {{#if @first}}
+              <h3 class="mt-4 mb-3">{{this}}</h3>
+            {{else}}
+              <p>{{this}}</p>
+            {{/if}}
+          {{/each}}
+        {{/each}}
+      </div>
+    </div>
+  {{/with}}
+  <hr class="my-5">
+  <div>
+    {{#with newsOtherBlock}}
+        {{>shoppost}}
+    {{/with}}
+  </div>
+  <hr class="my-5">
+  {{>shopaction}}
+  
+</main>
