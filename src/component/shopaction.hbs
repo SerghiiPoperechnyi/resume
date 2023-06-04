@@ -1,0 +1,14 @@
+<div>
+    {{#with service}}
+      <div class="card text-center text-bg-success">
+        <h2 class="card-title mt-3">{{title}}</h2>
+        <div class="card-body">{{description}}
+          <div>  
+            {{#each buttons}}
+            <button class="btn btn-primary mt-3" href="{{link}}">{{text}}</button>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    {{/with}}
+</div>

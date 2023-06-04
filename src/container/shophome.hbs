@@ -1,23 +1,5 @@
-<main class="p-5">
+<main>
   <div>
-    <div>
-      {{#with navigation}}
-        <div class="col-12">
-          <div class="card ">
-            <div class="nav p-3">
-              {{#each links}}
-                <div class="nav-item">
-                  <a href="{{href}}" class="nav-link">{{text}}</a>
-                </div>
-              {{/each}}
-              <div class="nav-item">
-                <a href="#" class="nav-link disabled">Disabled</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      {{/with}}
-    </div>
     <div>
       {{#with newsBlock}}
         <h1 class="text-center my-5">{{title}}</h1>
@@ -60,30 +42,7 @@
           </div>
         </div>
       </div>
-      <div>
-        <div class="col-12">
-          <div class="row g-3">
-            {{#each cards}}
-              <div class="col-4">
-                <div class="card">
-                  <img class="card-img-top" src="{{image}}" alt="{{title}}">
-                  <div class="card-body"> 
-                    <h5 class="card-title">{{title}}
-                      {{#if isHot}}
-                      <div class="badge bg-danger rounded-pill text-uppercase p-1.5 m-1">топ</div>
-                      {{/if}}
-                      {{#if isNew}}
-                      <div class="badge bg-success rounded-pill text-capitalize p-1.5 m-1">нове</div>
-                      {{/if}}
-                    </h5>
-                    <p>{{description}}</p>
-                  </div>              
-                </div>
-              </div>
-            {{/each}}
-          </div>
-        </div>
-      </div>
+      {{>shopcard}}
     {{/with}}
   </div>
   <hr class="my-5">
@@ -103,93 +62,5 @@
     {{/with}}
   </div>
   <hr class="my-5">
-  <div>
-    {{#with service}}
-      <div class="card text-center text-bg-success">
-        <h2 class="card-title mt-3">{{title}}</h2>
-        <div class="card-body">{{description}}
-          <div>  
-            {{#each buttons}}
-            <button class="btn btn-primary mt-3" href="{{link}}">{{text}}</button>
-            {{/each}}
-          </div>
-        </div>
-      </div>
-    {{/with}}
-  </div>
-  <hr class="my-5">
-  <div class="col-12">
-    <div class="row">
-      <div class="col-2">
-        <div>
-          <ul class="nav">
-            {{#each footer.[0]}}
-              <li class="nav-item">
-                <a href="{{link}}" class="nav-link">{{text}}</a>
-              </li>
-            {{/each}}
-            <li>
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-2">
-        <div>
-          <ul class="nav">
-            {{#each footer.[1]}}
-              <li class="nav-item">
-                <a href="{{link}}" class="nav-link">{{text}}</a>
-              </li>
-            {{/each}}
-            <li>
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-      </div>
-      </div>
-      <div class="col-2">
-        <div>
-          <ul class="nav">
-            {{#each footer.[2]}}
-              <li class="nav-item">
-                <a href="{{link}}" class="nav-link">{{text}}</a>
-              </li>
-            {{/each}}
-            <li>
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-      </div>
-      </div>
-      <div class="col-2">
-        <div>
-          <ul class="nav">
-            {{#each footer.[3]}}
-              <li class="nav-item">
-                <a href="{{link}}" class="nav-link">{{text}}</a>
-              </li>
-            {{/each}}
-            <li>
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-      </div>
-      </div>
-      <div class="col-2">
-        <div>
-          <ul class="nav">
-            {{#each footer.[4]}}
-              <li class="nav-item">
-                <a href="{{link}}" class="nav-link">{{text}}</a>
-              </li>
-            {{/each}}
-            <li>
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-      </div>
-      </div>
-    </div>
-  </div>
+  {{>shopaction}}
 </main>
