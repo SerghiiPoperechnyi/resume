@@ -1,0 +1,79 @@
+<main>
+  <div class="mt-5">
+    {{#with header}}
+      <h1>{{title}}</h1>
+      {{#with button}}
+        <button class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
+      {{/with}}
+    {{/with}}
+  </div>
+  <hr class="my-5">
+  <div class="col-12 ">
+    {{#each goodsBlock}}
+      <div class="card p-2 my-4">
+        <div class="row">
+          <img class="col-2" src="{{image}}" alt="#">
+          <div class="col-4">
+            <h5>{{name}}</h5>
+            <div>{{description}} </div>
+          </div>
+          <div class="col-2">
+            {{#with price}}
+              <div class="my-4 mb-2">{{title}}:</div> <h5>{{value}}</h5>
+            {{/with}}
+          </div>
+          <div class="col-2">{{amount}}</div>
+          <div class="col-2 my-2">
+            {{#each buttons}}
+              {{#if isPrimary}}
+                <button class="btn btn-primary mb-3">{{text}}</button>
+              {{else if isDanger}}
+                <button class="btn btn-outline-danger">{{text}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div>    
+    {{/each}}
+  </div>
+  <hr class="my-5">
+  <div>
+    {{#with total}}
+      <h3>{{title}}</h3>
+      <h2>{{amount}}</h2>
+      <div>{{delivery}}</div>
+      {{#each buttons}}
+        <div class="col-3">
+          {{#if isSuccess}}
+            <button class="btn btn-success mt-4 mb-3" href="{{link}}">{{text}}</button>
+          {{else if isOutline}}
+            <button class="btn btn-outline-success" href="{{link}}">{{text}}</button>
+          {{/if}}
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+  <hr class="my-5">
+  <div>
+    {{#with goodsOtherBlock}}
+      <h4 class="text-center mb-4">{{title}}</h4>
+      {{>shopcard}}
+    {{/with}}
+  </div>
+  <hr class="my-5">
+  <div>
+    {{#with subscribe}}
+      <div class="card text-bg-dark">
+        <h2 class="card-title mt-2 ms-3">{{header}}</h2>
+        <div class="card-body">{{description}}</div>
+        <div  class="d-grid gap-2 m-3">
+        {{#each buttons}}
+          <div>  
+          <button class="btn btn-primary" href="{{link}}">{{text}}</button>
+          </div>
+        {{/each}}
+        </div>
+      </div>
+    {{/with}}
+  </div>
+</main>
