@@ -83,44 +83,7 @@
         </div>
       {{/with}}
     </div>
-    {{#each reviewList}}
-      <div class="card p-3 my-5">
-        <div class="card">
-          <div class="card-header p-2">
-            {{#with title}}
-              <h5>{{userName}}</h5>
-              <p>{{caption}}</p>
-              <p>{{date}}</p>
-            {{/with}}
-          </div>
-          {{#with reviewBody}}
-            <div class="card-body p-2">
-              <p>{{seller.title}}: {{seller.value}}</p>
-              <p>{{rating.title}}: {{rating.value}}</p>
-              <p>{{text}}</p>
-              <h6>{{advantages.title}}:</h6>
-              <p>{{advantages.text}}</p>
-              <h6>{{disadvantages.title}}:</h6>
-              <p>{{disadvantages.text}}</p>
-              {{#each images}}
-                <img src="{{this}}" alt="#">
-              {{/each}}
-            </div>
-          {{/with}}
-        </div>
-        {{#with reviewBody}}
-        {{#each coments}}
-          <div class="card ms-5 my-3">
-            <div class="card-body">
-              <h5>{{userName}}</h5>
-              <p>{{date}}</p>
-              <p>{{text}}</p>
-            </div>
-          </div>
-        {{/each}}
-        {{/with}}
-      </div>
-    {{/each}}
+    {{>shopreview}}
     {{>shopaction}}
   </div>
 </main>
