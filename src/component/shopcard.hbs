@@ -1,24 +1,24 @@
 <div>
-    <div class="col-12">
-        <div class="row g-3">
-        {{#each cards}}
-            <div class="col-4">
-            <div class="card">
-                <img class="card-img-top" src="{{image}}" alt="{{title}}">
-                <div class="card-body"> 
-                <h5 class="card-title">{{title}}
-                    {{#if isHot}}
-                    <div class="badge bg-danger rounded-pill text-uppercase p-1.5 m-1">топ</div>
-                    {{/if}}
-                    {{#if isNew}}
-                    <div class="badge bg-success rounded-pill text-capitalize p-1.5 m-1">нове</div>
-                    {{/if}}
-                </h5>
-                <p>{{description}}</p>
-                </div>              
-            </div>
-            </div>
-        {{/each}}
+  <div class="col-12">
+    <div class="row g-3">
+      {{#each cards}}
+        <div class="col-4">
+          <div class="card">
+            <img class="card-img-top" src="{{image}}" alt="{{title}}">
+            <div class="card-body"> 
+              <h5 class="card-title">{{title}}
+              {{#if isHot}}
+                <div class="badge bg-danger rounded-pill text-uppercase p-1.5 m-1">топ</div>
+              {{/if}}
+              {{#if isNew}}
+                <div class="badge bg-success rounded-pill text-capitalize p-1.5 m-1">нове</div>
+              {{/if}}
+              </h5>
+              <p>{{description}}</p>
+            </div>              
+          </div>
         </div>
+      {{/each}}
     </div>
+  </div>
 </div>
