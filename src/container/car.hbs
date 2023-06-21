@@ -10,7 +10,6 @@
       <ul>
         <li>Features:
           {{#with features}}
-          <br>
             <ul> Interior:
               {{#with interior}}
                 <li>seats:
@@ -39,7 +38,6 @@
                 </li>
               {{/with}}
             </ul>
-            <br>
             <ul>Exterior:
               {{#with exterior}}
                 <li>wheels:
@@ -59,8 +57,7 @@
                 </li>
               {{/with}}
             </ul>
-            <br>
-            <ul>Safety:
+            <ul class="my-4">Safety:
                  {{#with safety}}
                 <li>airbags:
                   <ul>
@@ -98,7 +95,7 @@
             {{/with}}
           </ul>  
         </li>
-        <li>fuel_economy:
+        <li class="my-4">fuel_economy:
           <ul>
             {{#with fuel_economy}}
               <li>city: {{city}} </li>

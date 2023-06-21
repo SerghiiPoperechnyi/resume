@@ -3,9 +3,9 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<main>
   {{#with main}}
-  <main>
+  {{!-- <main> --}}
     <section>
       {{> title data="Work history" big= true}}
       <div>
@@ -13,19 +13,13 @@
           {{#each works}}
           <li>
             <div>{{position}}</div>
-
-            <br>
-
-            <div>
+            <div class="my-2">
               {{duration.from}}
               -
               {{#if duration.to}}
               {{duration.to}}
               {{else}} (ще працюю) {{/if}}
             </div>
-
-            <br>
-
             <div>
               {{#if company.url}}
               {{> link text=company.name href=company.url blank=true noLine=true}}
@@ -33,27 +27,21 @@
               <b>{{company.name}}</b>
               {{/if}}
             </div>
-            <br>
-            <br>
-            <div>
+            <div class="mt-5">
               <strong> Projects ({{projectAmount}})</strong>
             </div>
-            <br>
             <ul>
               {{#each projects}}
               <li>
                 <div>{{> link text=name href=url blank=true noLine=true}}</div>
-                <br>
-                <div>About {{about}} </div>
-                <br>
-                <div> <em>Project stacks ({{stackAmoGnt}})</em>
+                <p>About {{about}} </p>
+                <div class="mb-3"> <em>Project stacks ({{stackAmoGnt}})</em>
                   <ul>
                     {{#each stacks}}
                     <li>{{name}}</li>
                     {{/each}}
                   </ul>
                 </div>
-                <br>
                 <div> <em> Project awards ({{awardAmoGnt}})</em>
                   <ul>
                     {{#each awards}}
@@ -61,7 +49,6 @@
                     {{/each}}
                   </ul>
                 </div>
-                <br>
               </li>
               {{/each}}
             </ul>
@@ -70,9 +57,9 @@
         </ul>
       </div>
     </section>
-  </main>
+  {{!-- </main> --}}
   {{/with}}
-</div>
+</main>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
