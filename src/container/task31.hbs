@@ -6,24 +6,15 @@
             {{/each}}
                 <a class="btn btn-primary" href="{{button.href}}">{{button.text}}</a>
         {{/with}} 
-        <hr>
-        <br>
-        <br>
+        <hr class="mb-5">
         {{#with header}}
-            <h1>{{title}}</h1>
-            <br>
+            <h1 class="mb-4">{{title}}</h1>
             <p>{{description}}</p>
             <a class="btn btn-primary" href="{{button.link}}">{{button.text}}</a>
         {{/with}}
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
+        <hr class="my-5">
         {{#with city}}
-        <h2>{{city.title}}</h2>
-        <br>
-        <br>
+        <h2 class="mb-5">{{title}}</h2>
             <div class="col-10">
                 <div class="row gx-2 gy-4">
                     {{#each cards}}
@@ -41,13 +32,10 @@
                 </div>    
             </div>
         {{/with}}
-        <br>
-        <hr>
-        <br>
+        <hr class="my-5">
         <div>
         {{#with winner}}
-            <h2>{{title}}</h2>
-            <br>
+            <h2 class="mb-4">{{title}}</h2>
             {{#with table}}
             <div class="col-7">
                 <table class="table">
@@ -73,16 +61,10 @@
             {{/with}}
         {{/with}}
         </div>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
+        <hr class="my-5">
             {{#with gallery}}
             <div>
-                <h2>{{title}}</h2>
-                <br>
-                <br>
+                <h2 class="mb-5">{{title}}</h2>
                 <div class="row g-2">
                     {{#each cards}} 
                         <div class="col-4">
@@ -99,15 +81,10 @@
                 </div> 
             </div>
             {{/with}}
-        <br>
-        <br>
-        <hr>
-        <br>
+        <hr class="my-5">
         <div>
         {{#with relaxion}}
-        <div class="display-3">{{title}}</div>
-        <br>
-        <br>
+        <div class="display-3 mb-4">{{title}}</div>
         <div class="col-10">
             <div class="row g-2">
                 {{#each cards}}
@@ -125,11 +102,7 @@
         </div>
         {{/with}}
         </div>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
+        <hr class="my-5">
         <div>
         {{#with rest}}
         <div class="col-12">
@@ -153,16 +126,10 @@
         </div>
         {{/with}}
         </div>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
+        <hr class="my-5">
         <div>
         {{#with proposition}}
-        <div class="display-3">{{title}}</div>
-        <br>
-        <br>
+        <div class="display-3 mb-4">{{title}}</div>
         <div class="col-10">
             <div class="row g-2">
                 {{#each card}}
@@ -180,15 +147,10 @@
         </div>
         {{/with}}
         </div>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <br>
+        <hr class="my-5">
         <div class="col-9">
             {{#with footer}}
                 <h5>{{title}}</h5>
-                <br>
                 <div class="row">
                     <div class="col-3">
                         <div class="row">

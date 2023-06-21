@@ -4,18 +4,16 @@
     <br>
     <strong>Users:</strong>
     <div>
-      <br>
       <ul>    
         {{#each users}}
-          <li>  
+          <li class="my-3">  
             {{> face }}
-            <br>
-            <strong>Friends:</strong>
+            <div class="mt-3"><strong>Friends:</strong></div>
             <ul>
               {{#each friends}}
                 <li>
                   {{> face }}
-                    <ul><strong> Mutual friends:</strong>
+                    <ul class="my-3"><strong> Mutual friends:</strong>
                     {{#each mutual_friends}}
                       <li>{{> face}}
                         {{#if mutual_friends}}

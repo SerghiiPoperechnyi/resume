@@ -1,14 +1,13 @@
 <div>
   <main>
-    <h1>{{name}}</h1>
-    <br>
+    <p><h1>{{name}}</h1></p>
     <div>{{description}}</div>
     {{#with history}}
     <time>{{year}}, {{founder}}</time>
     {{/with}}
     <hr>
     <div>
-      <span class="badge text-bg-primary">Types:</span>
+      <span class="badge text-bg-primary p-2">Types:</span>
       <section>
         <ul>
           {{#each types}}
@@ -18,7 +17,7 @@
       </section>
     </div>
     <div>
-      <span class="badge text-bg-secondary">Syntax:</span>
+      <span class="badge text-bg-secondary p-2 my-2">Syntax:</span>
       <section>
         <ul>
           {{#with syntax}}
@@ -96,7 +95,7 @@
       </section>
     </div>
     <div>
-      <span class="badge text-bg-success">Features:</span>
+      <span class="badge text-bg-success my-2 p-2">Features:</span>
       <section>
         <ul>
           {{#each features}}
@@ -106,7 +105,7 @@
       </section>
     </div>
     <div>
-      <span class="badge text-bg-danger">Libraries:</span>
+      <span class="badge text-bg-danger my-2 p-2">Libraries:</span>
       <section>
         <ul>
           {{#each libraries}}
@@ -116,7 +115,7 @@
       </section>
     </div>
     <div>
-      <span class="badge text-bg-warning">Tools:</span>
+      <span class="badge text-bg-warning my-2 p-2">Tools:</span>
       <section>
         <ul>
           {{#each tools}}

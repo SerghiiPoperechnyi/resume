@@ -1,6 +1,7 @@
+<main>
+
 <div>
   {{#with person}}
-  <main>
     {{> title data="Person" big= true}}
     <section>
       <div>
@@ -8,22 +9,17 @@
           <li> Name: {{name}}</li>
           <li> Age: {{age}}</li>
           <li>Gender: {{gender}}</li>
-          {{!-- <br>
-          <br>
-          <li>{{#each education}}</li> --}}
         </ul>
       </div>
     </section>
     <hr>
-    <br>
-    <div>
+    <div class="my-4">
       <address>
         Adress: {{#with address}}
         Street: {{street}}, City: {{city}}, State: {{state}}, Zip: {{zip}}, Country: {{country}}
         {{/with}}
       </address>
     </div>
-    <br>
     <hr>
     <div><strong>Education:</strong>
       <ul>
@@ -32,7 +28,6 @@
         {{/each}}
       </ul>
     </div>
-    <br>
     <div><strong>workExperience</strong>
       <section>
         <ul>
@@ -53,8 +48,7 @@
                   <li>Name: {{name}} </li>
                   <li>About: {{description}}</li>
                   <li>Status: {{status}}</li>
-                  <br>
-                  <li>Teams:
+                  <li class="my-3">Teams:
                     <ul>
                       {{#each teams}}
                       <li>{{team_name}}</li>
@@ -62,23 +56,20 @@
                         {{name}}, {{title}}, {{email}}
                         {{/with}}
                       </li>
-                      <br>
-                      <li>Team members:
+                      <li class="mt-3">Team members:
                         {{#each team_members}}
                         <ul>
                           <li>{{name}}</li>
                           <li>{{title}}</li>
                           <li>{{email}}</li>
                           <li>{{skills}}</li>
-                          <br>
-                          <li>Projects:
+                          <li class="mt-3">Projects:
                             <ul>
                               {{#each projects}}
                               <li>{{name}}</li>
                               <li>{{description}}</li>
                               <li>{{technologies}}</li>
-                              <br>
-                              <li>Team members:
+                              <li class="my-3">Team members:
                                 <ul>
                                   <li>{{team_members.[0].name}}{{team_members.[0].title}}</li>
                                   <li>{{team_members.[1].name}}, {{team_members.[1].title}}</li>
@@ -103,10 +94,9 @@
         </ul>
       </section>
     </div>
-  </main>
   {{/with}}
 </div>
-
+</main>
 {{!--{{> title data='My certificates' big=false}}
 <section>
   <ul>

@@ -7,9 +7,7 @@
       <address>{{deathplace}}
       </address>
     </div>
-    <br>
-    <hr>
-    <br>
+    <hr class="my-5">
     <div>Nationality: {{nationality}}</div>
     <div>Occupation: {{occupation}}</div>
     <div>Known for:
@@ -19,12 +17,11 @@
         {{/each}}
       </ul>
     </div>
-    <div>Education:
+    <p>Education:
       {{#each education}}
       {{degree}}, {{field}}, {{institution}}, {{year}}
       {{/each}}
-    </div>
-    <br>
+    </p>
     <div>Notable publications:
       <ul>
         {{#each notable_publications}}

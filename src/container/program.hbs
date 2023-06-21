@@ -4,13 +4,9 @@
       <div>
         {{#with excursion}}
           <h1>Excursion: {{name}}</h1>
-          <br>
-          <hr>
-          <br>
+          <hr class="my-4">
           <div>{{location.city}}, {{location.country}}</div>
-          <time>{{date}}</time>
-          <br>
-          <br>
+          <div class="mb-5"><time>{{date}}</time></div>
           <div>Program:
             <hr>
             <ul>
@@ -25,7 +21,6 @@
                           {{#with location}}
                             {{address}}, {{city}}, {{country}}
                           {{/with}}
-                          <br>
                           <ul>
                             {{#each exhibits}}
                               <p>Exhibits: </p>
@@ -36,8 +31,7 @@
                             {{/each}}
                         {{/with}}
                       </div>
-                      <br>
-                      <div> Guide:
+                      <div class="mt-3"> Guide:
                         {{#with guide}}
                           {{name}}, {{language}}, {{rating}}
                         {{/with}}
@@ -57,9 +51,8 @@
                           {{/with}}
                         {{/with}}
                       </div>
-                      <br>
                       <ul>
-                        <p>Performers: </p>
+                        <p class="mt-3">Performers: </p>
                           {{#each performers}}
                             <li>{{name}}, {{type}}</li>
                           {{/each}}
